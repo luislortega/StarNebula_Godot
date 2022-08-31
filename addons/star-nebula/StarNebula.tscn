@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://addons/cloud/Cloud.shader" type="Shader" id=1]
+[ext_resource path="res://addons/star-nebula/StarNebula.shader" type="Shader" id=2]
+
+[sub_resource type="ShaderMaterial" id=1]
+render_priority = -123
+shader = ExtResource( 1 )
+
+[sub_resource type="ShaderMaterial" id=2]
+render_priority = -124
+next_pass = SubResource( 1 )
+shader = ExtResource( 1 )
+
+[sub_resource type="ShaderMaterial" id=3]
+render_priority = -125
+next_pass = SubResource( 2 )
+shader = ExtResource( 1 )
+
+[sub_resource type="ShaderMaterial" id=4]
+render_priority = -126
+next_pass = SubResource( 3 )
+shader = ExtResource( 1 )
+
+[sub_resource type="ShaderMaterial" id=5]
+render_priority = -127
+next_pass = SubResource( 4 )
+shader = ExtResource( 1 )
+
+[sub_resource type="ShaderMaterial" id=6]
+render_priority = -128
+next_pass = SubResource( 5 )
+shader = ExtResource( 2 )
+shader_param/seed = 0.0
+shader_param/star_color = Color( 1, 1, 1, 1 )
+shader_param/star_aperture = 7.0
+shader_param/nebula_1_color = Color( 1, 0.4, 0, 1 )
+shader_param/nebula_1_aperture = 3.0
+shader_param/nebula_1_power = 130.0
+shader_param/nebula_2_color = Color( 0.8, 0.67, 0, 1 )
+shader_param/nebula_2_aperture = 3.0
+shader_param/nebula_2_power = 80.0
+shader_param/nebula_3_color = Color( 0.2, 0.2, 1, 1 )
+shader_param/nebula_3_aperture = 3.0
+shader_param/nebula_3_power = 90.0
+
+[sub_resource type="CubeMesh" id=7]
+flip_faces = true
+
+[node name="Star" type="MeshInstance"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
+material_override = SubResource( 6 )
+cast_shadow = 0
+mesh = SubResource( 7 )
+material/0 = null

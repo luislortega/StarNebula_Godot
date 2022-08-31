@@ -1,2 +1,3 @@
-# StarNebula_Godot
-🪐 Godot nebula space shader 
+# Star Nebula Shader for Godot Engine
+
+WaSup! this is a Shader bitch :p

@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://addons/star-nebula/StarNebula.shader" type="Shader" id=1]
+
+[resource]
+render_priority = -128
+shader = ExtResource( 1 )
+shader_param/seed = 0.0
+shader_param/star_color = Color( 1, 1, 1, 1 )
+shader_param/star_aperture = 7.0
+shader_param/nebula_1_color = Color( 1, 0.4, 0, 1 )
+shader_param/nebula_1_aperture = 3.0
+shader_param/nebula_1_power = 130.0
+shader_param/nebula_2_color = Color( 0.8, 0.67, 0, 1 )
+shader_param/nebula_2_aperture = 3.0
+shader_param/nebula_2_power = 100.0
+shader_param/nebula_3_color = Color( 0.2, 0.2, 1, 1 )
+shader_param/nebula_3_aperture = 3.0
+shader_param/nebula_3_power = 90.0
